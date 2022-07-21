@@ -30,7 +30,6 @@ def youtube_video():
     except:
         logger.error("error\n")
 
-    # WEB PAGE CONTENT HERE
     # Automatically accept Terms of Service for YouTube
     try:
         button = driver.find_element(
@@ -42,8 +41,7 @@ def youtube_video():
         logger.error(
             "Terms of Service didn't appear/ Page loaded too quickly/ other error\n")
 
-    # Automatically select a random video from the first row
-    # Refresh page to avoid certain errors
+    # Automatically select a random video
     driver.refresh()
     try:
         video_to_select = np.random.randint(1, 4)
@@ -56,7 +54,7 @@ def youtube_video():
         logger.error("Page loaded too quickly/ other error\n")
 
     # Automatically skip adds before recording
-    # The program checks up to 4 ads with the variable check_ads
+    # Checking up to 4 ads with the variable check_ads
     # First it verifies if it is an unskippable ad then it checks if it is a skippable ad
     check_ads = 0
     while check_ads < 4:
