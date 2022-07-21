@@ -1,6 +1,6 @@
 # intenea
 
-#What does the project do?
+# What does the project do?
 
 -Opens a random video from youtube
 -Starts an audio and video recording
